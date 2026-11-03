@@ -93,3 +93,21 @@ Examples include:
 
 The random state was fixed at 42 to ensure reproducibility.
 
+## C. GitHub Repository Link
+
+**GitHub Repository:**
+
+https://github.com/2026aj05504-v-sreenivasa-prasad/MTech-AIML-ML-Assignment-2/
+
+The repository contains:
+
+- app.py
+- train_model.py
+- requirements.txt
+- test_data.csv
+- model/
+- results/
+- README.md
+
+All five trained classification models are saved
+using Joblib.
