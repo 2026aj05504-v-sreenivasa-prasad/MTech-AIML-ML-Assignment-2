@@ -239,7 +239,7 @@ models and evaluates them on uploaded test data.
 
 ### Step 1: Clone the repository
 
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone MTech-AIML-ML-Assignment-2
 
 ### Step 2: Enter the project directory
 
