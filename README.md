@@ -186,3 +186,96 @@ Therefore, considering all six evaluation metrics, Logistic Regression is select
 ### NOTE: 
 Logistic Regression and SVM are extremely close in performance. The difference in AUC is only 0.0004, so it is more accurate academically to conclude that Logistic Regression as the marginal winner and not claiming it is significantly better than SVM.
 
+## E. Streamlit Application
+
+The project includes an interactive Streamlit
+application for evaluating the trained models.
+
+### Application Features
+
+1. Upload test dataset in CSV format.
+2. Preview uploaded test data.
+3. Select one of five classification models.
+4. Compare evaluation results of all five models.
+5. Display Accuracy, AUC, Precision, Recall, F1 and MCC.
+6. Display confusion matrix.
+7. Display classification report.
+8. Download model comparison results.
+
+### Live Streamlit Application
+
+https://2026aj05504-v-sreenivasa-prasad-mtech-aiml-ml-assign-app-crcpgf.streamlit.app/
+
+## F. Implementation Details
+
+### Training and Testing
+
+- Training split: 80%
+- Testing split: 20%
+- Random state: 42
+- Stratified sampling: Yes
+
+### Project structure
+Below is the directory structure of the project
+
+MTech_ML_Assignment_2/
+│
+├── app.py
+├── train_model.py
+├── requirements.txt
+├── README.md
+├── test_data.csv
+│
+├── model/
+│   ├── logistic_regression.joblib
+│   ├── decision_tree.joblib
+│   ├── knn.joblib
+│   ├── naive_bayes.joblib
+│   └── svm.joblib
+│
+└── results/
+    └── model_comparison.csv
+    
+### Model Saving
+
+All trained models are stored in the model directory
+using Joblib.
+
+### Test Data
+
+The test_data.csv file contains all 30 input features
+and the target variable.
+
+The Streamlit application loads the previously saved
+models and evaluates them on uploaded test data.
+
+#### No model retraining takes place inside the application.
+
+## G. How to Run the Project
+
+### Step 1: Clone the repository
+
+git clone YOUR_GITHUB_REPOSITORY_URL
+
+### Step 2: Enter the project directory
+
+cd MTech-AIML-ML-Assignment-2
+
+### Step 3: Install dependencies
+
+pip install -r requirements.txt
+
+### Step 4: Train the models
+
+python train_model.py
+
+### Step 5: Launch the Streamlit application
+
+streamlit run app.py
+
+### Step 6: Upload test_data.csv
+
+Upload the generated test_data.csv file to evaluate
+the five trained classification models.
+
+
