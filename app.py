@@ -1289,5 +1289,3 @@ st.caption(
     "DISCLAIMER: This is educational demonstration only (As part of BITS MTech AI/ML Project). "
     "This application is not intended for medical diagnosis."
 )
-
-The information contained in this electronic communication is intended solely for the individual(s) or entity to which it is addressed. It may contain proprietary, confidential and/or legally privileged information. Any review, retransmission, dissemination, printing, copying or other use of, or taking any action in reliance on the contents of this information by person(s) or entities other than the intended recipient is strictly prohibited and may be unlawful. If you have received this communication in error, please notify us by responding to this email or telephone and immediately and permanently delete all copies of this message and any attachments from your system(s). The contents of this message do not necessarily represent the views or policies of BITS Pilani.
