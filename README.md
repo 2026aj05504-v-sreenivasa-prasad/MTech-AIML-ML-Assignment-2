@@ -233,7 +233,7 @@ and the target variable.
 The Streamlit application loads the previously saved
 models and evaluates them on uploaded test data.
 
-#### No model retraining takes place inside the application.
+#### Note: No model retraining takes place inside the application.
 
 ## G. How to Run the Project
 
@@ -261,5 +261,3 @@ streamlit run app.py
 
 Upload the generated test_data.csv file to evaluate
 the five trained classification models.
-
-
