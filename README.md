@@ -111,3 +111,78 @@ The repository contains:
 
 All five trained classification models are saved
 using Joblib.
+
+## D. Models Used and Evaluation Metrics
+
+All five classifiers were trained using the same dataset
+and evaluated using the same independent test dataset.
+
+### 1. Logistic Regression
+
+Logistic Regression is a supervised classification
+algorithm that estimates the probability of a sample
+belonging to a particular class.
+
+### 2. Decision Tree Classifier
+
+Decision Tree is a supervised learning algorithm that
+classifies samples using a sequence of decision rules.
+
+### 3. K-Nearest Neighbors Classifier
+
+KNN classifies a new sample based on the classes of
+its nearest neighboring observations.
+
+### 4. Gaussian Naive Bayes
+
+Gaussian Naive Bayes is a probabilistic classifier
+based on Bayes' theorem and assumes Gaussian
+distributions for input features within each class.
+
+### 5. Support Vector Machine
+
+SVM identifies an optimal decision boundary to
+separate observations belonging to different classes.
+The RBF kernel is used in this implementation.
+
+### Model Comparison Table
+
+<img width="797" height="314" alt="image" src="https://github.com/user-attachments/assets/f26761ed-6c67-498e-a480-95d72e95a102" />
+
+## Observations About Model Performance
+
+#1. Logistic Regression
+
+Logistic Regression demonstrated excellent performance across all six evaluation metrics. It achieved an accuracy of 0.9825 (98.25%), an AUC of 0.9954, precision of 0.9861, recall of 0.9861, an F1-score of 0.9861, and an MCC of 0.9623. These results indicate that the model is highly accurate and provides an excellent balance between precision and recall. Its very high AUC also indicates outstanding ability to distinguish between benign and malignant classes. Overall, Logistic Regression showed the best performance among the five classification models.
+
+#2. Decision Tree
+
+The Decision Tree model achieved an accuracy of 0.9211 (92.11%), an AUC of 0.9163, precision of 0.9565, recall of 0.9167, an F1-score of 0.9362, and an MCC of 0.8341. Although it achieved reasonably high precision, its recall was comparatively lower, indicating that it missed more positive cases than the other high-performing models. It also recorded the lowest AUC and MCC among all five models. This suggests that the Decision Tree performed relatively less effectively in comparison with the other classification algorithms.
+
+#3. KNN (K-Nearest Neighbors)
+
+The KNN model achieved an accuracy of 0.9561 (95.61%), an AUC of 0.9788, precision of 0.9589, recall of 0.9722, an F1-score of 0.9655, and an MCC of 0.9054. The model demonstrated good overall classification performance, with particularly high recall, indicating that it correctly identified a large proportion of positive cases. Its F1-score also reflects a good balance between precision and recall. However, its performance was slightly lower than Logistic Regression and Support Vector Machine across most evaluation metrics.
+
+#4. Naive Bayes
+
+The Naive Bayes model achieved an accuracy of 0.9298 (92.98%), an AUC of 0.9868, precision of 0.9444, recall of 0.9444, an F1-score of 0.9444, and an MCC of 0.8492. The model demonstrated a relatively high AUC, indicating good class discrimination based on predicted probabilities. Its precision and recall were equal, showing a balanced classification performance. However, its accuracy, F1-score, and MCC were lower than those of KNN, Logistic Regression, and Support Vector Machine. Therefore, Naive Bayes provided reasonable performance but was not the best-performing model.
+
+#5. Support Vector Machine (SVM)
+
+The Support Vector Machine model achieved an accuracy of 0.9825 (98.25%), an AUC of 0.9950, precision of 0.9861, recall of 0.9861, an F1-score of 0.9861, and an MCC of 0.9623. Its performance was almost identical to Logistic Regression across all six evaluation metrics. It achieved the same accuracy, precision, recall, F1-score, and MCC as Logistic Regression, with only a marginally lower AUC. These results indicate that SVM is also highly effective at classifying the data and distinguishing between the two classes.
+
+##Overall Winner
+
+Logistic Regression is the best-performing model among the five classification algorithms.
+
+It achieved the highest accuracy of 98.25%, tied with Support Vector Machine, demonstrating excellent overall classification performance. It also achieved the highest AUC of 0.9954, indicating a slightly better ability to distinguish between the two classes compared with the other models.
+
+Furthermore, Logistic Regression achieved a precision of 0.9861 and a recall of 0.9861, indicating that it correctly identifies positive cases while maintaining a very low proportion of false positive predictions. Its F1-score of 0.9861 confirms an excellent balance between precision and recall. Additionally, its MCC of 0.9623 indicates a very strong correlation between the actual and predicted classifications.
+
+Although Support Vector Machine achieved identical values for accuracy, precision, recall, F1-score, and MCC, Logistic Regression performed slightly better in terms of AUC (0.9954 compared with 0.9950).
+
+Therefore, considering all six evaluation metrics, Logistic Regression is selected as the overall best-performing classification model, with Support Vector Machine being a very close second. Both models demonstrated excellent classification capabilities, but Logistic Regression achieved the highest AUC and the best overall results in this comparison.
+
+# NOTE: 
+Logistic Regression and SVM are extremely close in performance. The difference in AUC is only 0.0004, so it is more accurate academically to conclude that Logistic Regression as the marginal winner and not claiming it is significantly better than SVM.
+
