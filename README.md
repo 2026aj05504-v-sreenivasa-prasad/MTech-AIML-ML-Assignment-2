@@ -183,6 +183,6 @@ Although Support Vector Machine achieved identical values for accuracy, precisio
 
 Therefore, considering all six evaluation metrics, Logistic Regression is selected as the overall best-performing classification model, with Support Vector Machine being a very close second. Both models demonstrated excellent classification capabilities, but Logistic Regression achieved the highest AUC and the best overall results in this comparison.
 
-# NOTE: 
+### NOTE: 
 Logistic Regression and SVM are extremely close in performance. The difference in AUC is only 0.0004, so it is more accurate academically to conclude that Logistic Regression as the marginal winner and not claiming it is significantly better than SVM.
 
