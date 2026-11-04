@@ -218,24 +218,8 @@ https://2026aj05504-v-sreenivasa-prasad-mtech-aiml-ml-assign-app-crcpgf.streamli
 ### Project structure
 Below is the directory structure of the project
 
-MTech_ML_Assignment_2/
-│
-├── app.py
-├── train_model.py
-├── requirements.txt
-├── README.md
-├── test_data.csv
-│
-├── model/
-│   ├── logistic_regression.joblib
-│   ├── decision_tree.joblib
-│   ├── knn.joblib
-│   ├── naive_bayes.joblib
-│   └── svm.joblib
-│
-└── results/
-    └── model_comparison.csv
-    
+<img width="441" height="443" alt="image" src="https://github.com/user-attachments/assets/f6d46b0b-55e9-4d52-a5a1-0c7d8e2713cf" />
+ 
 ### Model Saving
 
 All trained models are stored in the model directory
