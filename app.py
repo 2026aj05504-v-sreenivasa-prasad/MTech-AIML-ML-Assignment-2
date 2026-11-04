@@ -127,10 +127,33 @@ TARGET_COLUMN = "target"
 # STEP 4: LOAD PREVIOUSLY TRAINED MODELS
 # ============================================================
 
+# Display dashboard heading BEFORE loading models
+st.markdown(
+    '<div class="main-title">'
+    '🎗️ Breast Cancer Classification Dashboard'
+    '</div>',
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="sub-title">'
+    'M.Tech (AIML) | Machine Learning Assignment 2'
+    '</div>',
+    unsafe_allow_html=True
+)
+
+st.info(
+    "Initializing the dashboard and loading five previously "
+    "trained machine learning models. Please wait..."
+)
+
+
 @st.cache_resource
 def load_models():
 
     loaded_models = {}
+
+    print("STARTING MODEL LOADING...", flush=True)
 
     for model_name, filename in MODEL_FILES.items():
 
@@ -139,30 +162,61 @@ def load_models():
             filename
         )
 
+        print(
+            f"Loading {model_name}: {model_path}",
+            flush=True
+        )
+
         if not os.path.exists(model_path):
+
             raise FileNotFoundError(
                 f"Trained model not found: {model_path}"
             )
 
-        loaded_models[model_name] = joblib.load(model_path)
+        loaded_models[model_name] = joblib.load(
+            model_path
+        )
+
+        print(
+            f"SUCCESS: {model_name} loaded.",
+            flush=True
+        )
+
+    print("ALL FIVE MODELS LOADED SUCCESSFULLY!", flush=True)
 
     return loaded_models
 
 
 try:
-    models = load_models()
+
+    with st.spinner(
+        "Loading all five trained ML models..."
+    ):
+
+        models = load_models()
+
+    st.success(
+        "All five trained ML models loaded successfully!"
+    )
 
 except Exception as error:
 
-    st.error(f"Unable to load trained models: {error}")
+    print(
+        f"MODEL LOADING ERROR: {repr(error)}",
+        flush=True
+    )
+
+    st.error(
+        f"Unable to load trained models: {error}"
+    )
 
     st.info(
-        "Please execute train_model.py first and verify "
-        "that all five Joblib files exist in the model folder."
+        "Please verify that all five Joblib files exist "
+        "in the model folder and that their library versions "
+        "are compatible."
     )
 
     st.stop()
-
 
 # ============================================================
 # STEP 5: APPLICATION HEADER
