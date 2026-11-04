@@ -261,3 +261,39 @@ streamlit run app.py
 
 Upload the generated test_data.csv file to evaluate
 the five trained classification models.
+
+## H. Conclusion
+
+This project demonstrates an end-to-end Machine
+Learning classification workflow.
+
+Five supervised classification algorithms were
+implemented using the Breast Cancer Wisconsin
+Diagnostic dataset.
+
+The models were evaluated using six performance
+metrics and their performance was compared.
+
+The trained models were saved using Joblib and
+integrated into an interactive Streamlit application.
+
+The application allows users to upload test datasets,
+evaluate different classifiers, view confusion matrices,
+and compare model performance.
+
+The project demonstrates practical understanding of
+Machine Learning implementation, model evaluation,
+visualization and deployment.
+
+## I. Project Technologies
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Streamlit
+- GitHub
+- Streamlit Community Cloud
